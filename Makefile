@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
+#    My_Makefile                                        :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/24 17:30:30 by vpushkar          #+#    #+#              #
-#    Updated: 2025/03/24 17:30:49 by vpushkar         ###   ########.fr        #
+#    Updated: 2025/03/25 14:25:22 by vpushkar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,12 +51,12 @@ $(LIBFT_DIR):
 
 # Rule to build the libft static library
 $(LIBFT_DIR)/libft.a: $(LIBFT_DIR)/Makefile
-	# Run make in the libft directory to build libft
+# Run make in the libft directory to build libft
 	$(MAKE) -C $(LIBFT_DIR)
 
 # Rule to ensure that libft Makefile is cloned (if needed)
 $(LIBFT_DIR)/Makefile:
-	# Clone libft repository if it's not already there
+# Clone libft repository if it's not already there
 	git clone $(LIBFT_REPO) $(LIBFT_DIR)
 
 # Rule to compile source files into object files (.o)
@@ -68,19 +68,20 @@ $(OBJ_DIR):
 	mkdir -p $(OBJ_DIR)
 
 # Rule to create the final static library (.a) from object files
-$(NAME): $(OBJ)
-	ar rcs $(NAME) $(OBJ)
+$(NAME): $(LIBFT_DIR)/libft.a $(OBJ_DIR) $(OBJ)
+	cp $(LIBFT_DIR)/libft.a $(NAME)
+	ar rcs $@ $(OBJ)
 
 # Rule to clean object files and directories
 clean:
 	$(RM) $(OBJ_DIR)
-	# Clean libft objects by running 'make clean' inside the libft directory
+# Clean libft objects by running 'make clean' inside the libft directory
 	$(MAKE) -C $(LIBFT_DIR) clean
 
 # Rule to clean everything: remove object files and the final library
 fclean: clean
 	$(RM) $(NAME)
-	# Clean libft library by running 'make fclean' inside the libft directory
+# Clean libft library by running 'make fclean' inside the libft directory
 	$(MAKE) -C $(LIBFT_DIR) fclean
 
 # Rule to rebuild everything: clean and then build again
