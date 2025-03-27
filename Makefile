@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    My_Makefile                                        :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/24 17:30:30 by vpushkar          #+#    #+#              #
-#    Updated: 2025/03/25 14:25:22 by vpushkar         ###   ########.fr        #
+#    Updated: 2025/03/27 14:45:37 by vpushkar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,8 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror $(INCLUDE)
 
 # List of source files for ft_printf
-SRC = ft_printf.c
+SRC = ft_printf.c ft_printf_chars.c ft_printf_pointers.c \
+	ft_printf_puthex_fd.c ft_printf_putnbr_fd.c
 # Add the path to the source files (from the src directory)
 SRC := $(addprefix $(SRC_DIR)/, $(SRC))
 
