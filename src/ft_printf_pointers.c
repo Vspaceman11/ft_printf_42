@@ -6,11 +6,22 @@
 /*   By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 14:22:48 by vpushkar          #+#    #+#             */
-/*   Updated: 2025/03/27 14:23:02 by vpushkar         ###   ########.fr       */
+/*   Updated: 2025/03/27 16:19:03 by vpushkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
+/**
+ * @brief Writes a pointer address in hexadecimal format to fd.
+ *
+ * This function converts a pointer to a hexadecimal address and writes
+ * it to the file descriptor `fd`. The address is prefixed with "0x".
+ * If the pointer is NULL, "0x0" is printed.
+ *
+ * @param ptr The pointer to print.
+ * @param fd The file descriptor to write to.
+ * @return The number of characters written, or -1 if error occurs.
+ */
 
 int	ft_printf_put_pointer_fd(uintptr_t ptr, int fd)
 {

@@ -6,11 +6,22 @@
 /*   By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 14:12:30 by vpushkar          #+#    #+#             */
-/*   Updated: 2025/03/27 15:24:57 by vpushkar         ###   ########.fr       */
+/*   Updated: 2025/03/27 16:21:09 by vpushkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
+/**
+ * @brief Writes an integer to fd.
+ *
+ * This function recursively converts the integer `n` into its string
+ * representation and writes it to the file descriptor `fd`. It handles the
+ * special case of the minimum integer value (-2147483648).
+ *
+ * @param n The integer to convert.
+ * @param fd The file descriptor to write to.
+ * @return The number of characters written, or -1 if error occurs.
+ */
 
 int	ft_printf_putnbr_fd(int n, int fd)
 {
@@ -37,6 +48,16 @@ int	ft_printf_putnbr_fd(int n, int fd)
 	count++;
 	return (count);
 }
+/**
+ * @brief Writes an unsigned integer to fd.
+ *
+ * This function recursively converts the unsigned integer `n` into its
+ * string representation and writes it to the file descriptor `fd`.
+ *
+ * @param n The unsigned integer to convert.
+ * @param fd The file descriptor to write to.
+ * @return The number of characters written, or -1 if error occurs.
+ */
 
 int	ft_printf_put_unsigned_fd(unsigned int n, int fd)
 {
