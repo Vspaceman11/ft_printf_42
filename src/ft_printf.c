@@ -6,7 +6,7 @@
 /*   By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 16:17:09 by vpushkar          #+#    #+#             */
-/*   Updated: 2025/03/27 16:09:25 by vpushkar         ###   ########.fr       */
+/*   Updated: 2025/03/27 16:23:40 by vpushkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,20 @@
 
 static int	ft_printf_handle_format(char specifier, va_list args);
 static void	ft_var_declaration(int *i, int *count);
-
+/**
+ * @brief Custom implementation of printf.
+ *
+ * This function is a simplified version of the standard printf function.
+ * It handles the `%` format specifier for different data types and writes
+ * the formatted output to the standard output (fd = 1).
+ * It supports integers, unsigned integers, characters, strings, pointers,
+ * and hexadecimal formatting.
+ *
+ * @param format The format string, potentially containing format specifiers
+ * 			like `%d`, `%s`, etc.
+ * @return The number of characters printed (excluding the null byte),
+ * 			or -1 in case of an error.
+ */
 int	ft_printf(const char *format, ...)
 {
 	va_list	args;
@@ -43,6 +56,17 @@ int	ft_printf(const char *format, ...)
 	va_end(args);
 	return (count);
 }
+/**
+ * @brief Handles format specifiers and calls the corresponding functions.
+ *
+ * This function processes a single format specifier and calls the appropriate
+ * function to handle the corresponding type of argument (e.g., integer, string,
+ * pointer, etc.).
+ *
+ * @param specifier The format specifier character (e.g., 'd', 's', '%').
+ * @param args The variable argument list containing the value to format.
+ * @return The number of characters printed, or -1 in case of an error.
+ */
 
 static int	ft_printf_handle_format(char specifier, va_list args)
 {
@@ -69,6 +93,15 @@ static int	ft_printf_handle_format(char specifier, va_list args)
 		return (-1);
 	return (count);
 }
+/**
+ * @brief Initializes variables i and count.
+ *
+ * This function initializes the index variable `i` and the counter `count`
+ * to zero, preparing them for use in the main printf function.
+ *
+ * @param i Pointer to the index variable.
+ * @param count Pointer to the counter variable.
+ */
 
 static void	ft_var_declaration(int *i, int *count)
 {
