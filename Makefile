@@ -6,11 +6,11 @@
 #    By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/11 14:13:04 by vpushkar          #+#    #+#              #
-#    Updated: 2025/03/27 17:20:31 by vpushkar         ###   ########.fr        #
+#    Updated: 2025/03/27 17:30:23 by vpushkar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft.a
+NAME = libftprintf.a
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -g
 SRC_DIR = src
