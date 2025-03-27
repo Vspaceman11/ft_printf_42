@@ -6,14 +6,15 @@
 /*   By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 16:21:43 by vpushkar          #+#    #+#             */
-/*   Updated: 2025/03/27 16:10:18 by vpushkar         ###   ########.fr       */
+/*   Updated: 2025/03/27 16:56:55 by vpushkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 # include <stdarg.h>
-# include "../libft/inc/libft.h"
+# include <stdint.h>
+# include <unistd.h>
 
 int	ft_printf(const char *format, ...);
 

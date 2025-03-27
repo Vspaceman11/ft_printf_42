@@ -6,7 +6,7 @@
 /*   By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 16:17:09 by vpushkar          #+#    #+#             */
-/*   Updated: 2025/03/27 16:23:40 by vpushkar         ###   ########.fr       */
+/*   Updated: 2025/03/27 17:20:50 by vpushkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ static void	ft_var_declaration(int *i, int *count);
  * @return The number of characters printed (excluding the null byte),
  * 			or -1 in case of an error.
  */
+
 int	ft_printf(const char *format, ...)
 {
 	va_list	args;
