@@ -6,7 +6,7 @@
 #    By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/11 14:13:04 by vpushkar          #+#    #+#              #
-#    Updated: 2025/03/27 17:30:23 by vpushkar         ###   ########.fr        #
+#    Updated: 2025/03/28 11:47:13 by vpushkar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,6 @@ SRCS = $(addprefix $(SRC_DIR)/, $(SRC))
 
 OBJ = $(addprefix $(OBJ_DIR)/, $(SRC:.c=.o))
 
-INC = $(INC_DIR)/libft.h
 RM = rm -f
 
 all: $(NAME)

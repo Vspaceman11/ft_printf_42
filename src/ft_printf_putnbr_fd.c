@@ -6,11 +6,12 @@
 /*   By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 14:12:30 by vpushkar          #+#    #+#             */
-/*   Updated: 2025/03/27 16:21:09 by vpushkar         ###   ########.fr       */
+/*   Updated: 2025/03/28 13:41:30 by vpushkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
+
 /**
  * @brief Writes an integer to fd.
  *
@@ -22,7 +23,6 @@
  * @param fd The file descriptor to write to.
  * @return The number of characters written, or -1 if error occurs.
  */
-
 int	ft_printf_putnbr_fd(int n, int fd)
 {
 	int	count;
@@ -48,6 +48,7 @@ int	ft_printf_putnbr_fd(int n, int fd)
 	count++;
 	return (count);
 }
+
 /**
  * @brief Writes an unsigned integer to fd.
  *
@@ -58,7 +59,6 @@ int	ft_printf_putnbr_fd(int n, int fd)
  * @param fd The file descriptor to write to.
  * @return The number of characters written, or -1 if error occurs.
  */
-
 int	ft_printf_put_unsigned_fd(unsigned int n, int fd)
 {
 	int	count;

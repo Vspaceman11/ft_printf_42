@@ -6,11 +6,12 @@
 /*   By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 14:07:09 by vpushkar          #+#    #+#             */
-/*   Updated: 2025/03/27 16:17:06 by vpushkar         ###   ########.fr       */
+/*   Updated: 2025/03/28 13:41:00 by vpushkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
+
 /**
  * @brief Writes a single character to the given file descriptor.
  *
@@ -21,13 +22,13 @@
  * @param fd The file descriptor where the character is written.
  * @return 1 on success, -1 on failure.
  */
-
 int	ft_printf_putchar_fd(char c, int fd)
 {
 	if (write(fd, &c, 1) == -1)
 		return (-1);
 	return (1);
 }
+
 /**
  * @brief Writes a string to the given file descriptor.
  *
@@ -39,7 +40,6 @@ int	ft_printf_putchar_fd(char c, int fd)
  * @param fd The file descriptor where the string is written.
  * @return The number of characters written, or -1 on failure.
  */
-
 int	ft_printf_putstr_fd(char *s, int fd)
 {
 	int	i;

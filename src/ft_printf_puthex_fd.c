@@ -6,11 +6,12 @@
 /*   By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 14:22:01 by vpushkar          #+#    #+#             */
-/*   Updated: 2025/03/27 16:20:15 by vpushkar         ###   ########.fr       */
+/*   Updated: 2025/03/28 13:41:16 by vpushkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
+
 /**
  * @brief Writes an unsigned integer in lowercase hexadecimal to fd.
  *
@@ -21,7 +22,6 @@
  * @param fd The file descriptor to write to.
  * @return The number of characters written, or -1 if error occurs.
  */
-
 int	ft_printf_puthex_lower_fd(unsigned int n, int fd)
 {
 	char	*hex_digits;
@@ -43,6 +43,7 @@ int	ft_printf_puthex_lower_fd(unsigned int n, int fd)
 	count++;
 	return (count);
 }
+
 /**
  * @brief Writes an unsigned integer in uppercase hexadecimal to fd.
  *
@@ -53,7 +54,6 @@ int	ft_printf_puthex_lower_fd(unsigned int n, int fd)
  * @param fd The file descriptor to write to.
  * @return The number of characters written, or -1 if error occurs.
  */
-
 int	ft_printf_puthex_upper_fd(unsigned int n, int fd)
 {
 	char	*hex_digits;
