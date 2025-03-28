@@ -6,14 +6,14 @@
 /*   By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 16:17:09 by vpushkar          #+#    #+#             */
-/*   Updated: 2025/03/27 17:20:50 by vpushkar         ###   ########.fr       */
+/*   Updated: 2025/03/28 14:09:36 by vpushkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
 
 static int	ft_printf_handle_format(char specifier, va_list args);
-static void	ft_var_declaration(int *i, int *count);
+
 /**
  * @brief Custom implementation of printf.
  *
@@ -28,21 +28,20 @@ static void	ft_var_declaration(int *i, int *count);
  * @return The number of characters printed (excluding the null byte),
  * 			or -1 in case of an error.
  */
-
 int	ft_printf(const char *format, ...)
 {
 	va_list	args;
 	int		i;
 	int		count;
 
-	ft_var_declaration(&i, &count);
+	i = 0;
+	count = 0;
 	va_start(args, format);
 	while (format[i] != '\0')
 	{
 		if (format[i] == '%')
 		{
-			i++;
-			count += ft_printf_handle_format(format[i], args);
+			count += ft_printf_handle_format(format[++i], args);
 			if (count == -1)
 				return (-1);
 		}
@@ -57,6 +56,7 @@ int	ft_printf(const char *format, ...)
 	va_end(args);
 	return (count);
 }
+
 /**
  * @brief Handles format specifiers and calls the corresponding functions.
  *
@@ -68,7 +68,6 @@ int	ft_printf(const char *format, ...)
  * @param args The variable argument list containing the value to format.
  * @return The number of characters printed, or -1 in case of an error.
  */
-
 static int	ft_printf_handle_format(char specifier, va_list args)
 {
 	int	count;
@@ -94,18 +93,4 @@ static int	ft_printf_handle_format(char specifier, va_list args)
 		return (-1);
 	return (count);
 }
-/**
- * @brief Initializes variables i and count.
- *
- * This function initializes the index variable `i` and the counter `count`
- * to zero, preparing them for use in the main printf function.
- *
- * @param i Pointer to the index variable.
- * @param count Pointer to the counter variable.
- */
 
-static void	ft_var_declaration(int *i, int *count)
-{
-	*i = 0;
-	*count = 0;
-}
