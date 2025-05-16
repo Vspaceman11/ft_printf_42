@@ -6,7 +6,7 @@
 /*   By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 16:21:43 by vpushkar          #+#    #+#             */
-/*   Updated: 2025/03/27 17:39:28 by vpushkar         ###   ########.fr       */
+/*   Updated: 2025/05/16 15:43:18 by vpushkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FT_PRINTF_H
 # include <stdarg.h>
 # include <unistd.h>
+# include <stdint.h>
 
 int	ft_printf(const char *format, ...);
 
